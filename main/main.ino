@@ -1,7 +1,7 @@
 #include <LiquidCrystal.h>
 #include "IRremote.h"
 
-#include "customChar.h"
+//#include "customChar.h"
 
 int receiver = 3;
 
@@ -57,5 +57,5 @@ void loop() {
     lcd.setCursor(0, 0);
     irrecv.resume(); // receive the next value
   }
-  delay(5000);
+  delay(250);
 }
