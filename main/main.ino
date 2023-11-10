@@ -1,6 +1,8 @@
 #include <LiquidCrystal.h>
 #include "IRremote.h"
 
+#include "customChar.h"
+
 int receiver = 3;
 
 IRrecv irrecv(receiver);     // create instance of 'irrecv'
@@ -42,6 +44,8 @@ String translateIR() {
 void setup() {
   LiquidCrystal lcd(4, 6, 10, 11, 12, 13);
   lcd.begin(16, 2);
+  lcd.setCursor(0,1);
+  //lcd.print();
   irrecv.enableIRIn(); // Start the receiver
 
 }
@@ -53,5 +57,5 @@ void loop() {
     lcd.setCursor(0, 0);
     irrecv.resume(); // receive the next value
   }
-  delay(1000);
+  delay(5000);
 }
