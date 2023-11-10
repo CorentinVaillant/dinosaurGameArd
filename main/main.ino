@@ -1,7 +1,7 @@
 #include <LiquidCrystal.h>
 #include "IRremote.h"
 
-//#include "customChar.h"
+//#include "../lib/customChar/customChar.h"
 
 int receiver = 3;
 
